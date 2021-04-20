@@ -13,9 +13,15 @@
 
 # Podpunkt 1
 cat ./pliczki/yolo.csv | sed 1d | cut -d',' -f1,2,3 | grep -E "^[0-9]{0,}[13579]," 1>&2
+echo -e "\nWcisnij ENTER aby przejsc do kolejnego podpunktu"
+read stop
 
 # Podpunkt 2
 cat ./pliczki/yolo.csv | sed 1d | cut -d',' -f3,7 | grep -E '\$[259]\.[9]{2}[BM]' 1>&2
+echo -e "\nWcisnij ENTER aby przejsc do kolejnego podpunktu"
+read stop
 
 # Podpunkt 3
 cat ./pliczki/yolo.csv | sed 1d | cut -d',' -f6 | grep -E "^[0-9]\.[0-9]\.[0-9]{1,3}\.[0-9]{1,3}" 1>&2
+echo -e "\nWcisnij ENTER aby zakonczyc"
+read stop
